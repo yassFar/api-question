@@ -7,7 +7,7 @@ import MySQLdb
 
 app = Flask(__name__)
 
-with MySQLdb.connect(host="localhost", user="root", passwd="", db="wb") as cs:
+with MySQLdb.connect(host="localhost", user="root", passwd="root", db="wb") as cs:
 
     @app.route("/question", methods=['GET', 'POST'])
     def question():
