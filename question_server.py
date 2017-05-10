@@ -7,7 +7,7 @@ import MySQLdb
 
 app = Flask(__name__)
 
-with MySQLdb.connect(host="localhost",user="root",passwd="",db="wb") as cs:
+with MySQLdb.connect(host="localhost", user="root", passwd="", db="wb") as cs:
 
     @app.route("/question", methods=['GET', 'POST'])
     def question():
@@ -34,7 +34,7 @@ with MySQLdb.connect(host="localhost",user="root",passwd="",db="wb") as cs:
             id = str(id)
             cs.execute("""SELECT libelle FROM question WHERE id = (%s);""", (id,))
             for row in cs:
-            	question = row[0]
+                question = row[0]
             return question, 200
         except MySQLdb.Error, e:
             try:
@@ -48,4 +48,4 @@ with MySQLdb.connect(host="localhost",user="root",passwd="",db="wb") as cs:
         pass
 
     if __name__ == "__main__":
-        app.run()
+        app.run(host="0.0.0.0", port=5000)
