@@ -72,9 +72,9 @@ class Traitement_question_thread(Thread):
                         return "Could not store the question", 500
 
 
-host = "127.0.0.1"  # poridore.mysql.pythonanywhere-services.com
+host = "146.148.27.130"  # poridore.mysql.pythonanywhere-services.com
 user = "root"
-pwd = ""
+pwd = "root"
 db = "wb"
 
 db = MySQLdb.connect(host, user, pwd, db)

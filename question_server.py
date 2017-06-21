@@ -6,9 +6,9 @@ from flask import Flask, request, redirect, Response
 import MySQLdb
 
 
-host = "127.0.0.1"  # poridore.mysql.pythonanywhere-services.com
+host = "146.148.27.130"  # poridore.mysql.pythonanywhere-services.com
 user = "root"
-pwd = ""
+pwd = "root"
 db = "wb"
 app = Flask(__name__)
 
